@@ -1,1 +1,12 @@
-%header
+%header.navbar.bg-dark
+  .container
+    = link_to root_path, class: "navbar-brand" do
+      %p.yh-brand-text.yh-first-bigger= "YANG"
+      %p.yh-brand-text.yh-first-bigger= "HUNG"
+      %p.yh-brand-text.yh-brand-bigger= "TW"
+
+    - if signed_in?
+      %ul.nav.navbar-nav.ml-auto
+        %li
+          = link_to "Logout" , logout_path, method: :delete
+

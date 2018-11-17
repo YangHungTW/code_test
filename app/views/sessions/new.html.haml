@@ -1,0 +1,28 @@
+- this_title_is "Login"
+
+.row.yh-container
+  .col-12.col-sm-6.mr-sm-auto.ml-sm-auto
+
+    = render "layouts/alert"
+
+    .jumbotron
+      %h1.yh-page-title Login
+
+      = form_for(:session, method: :post, url: login_path) do |f|
+        .form-group
+          = f.label :email, 'E-mail'
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Enter email", class: "form-control"
+
+        .form-group
+          = f.label :password, 'Password (8 characters minimum)'
+          = f.password_field :password, autocomplete: "off", class: "form-control", minlength: 8, required: true
+
+        .row.no-gutters
+          = f.submit "Login", class: "col-sm-3 btn btn-primary"
+
+        .form-group
+          .small.form-text.text-muted.row.no-gutters
+            %span.col-1 New user?
+            = link_to "Sign up now!", sign_up_path, class: "col"
+            %span.col-1= " | "
+            = link_to "Forgot password?", new_forgot_password_path, class: "col"

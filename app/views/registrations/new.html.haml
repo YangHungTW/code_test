@@ -1,0 +1,26 @@
+- this_title_is "Sign up"
+
+.row.yh-container
+  .col-12.col-sm-6.mr-sm-auto.ml-sm-auto
+
+    = render "layouts/alert"
+
+    .jumbotron
+      %h1.yh-page-title Sign Up
+
+      = form_for(@user, as: 'user', method: :post, url: create_user_path) do |f|
+        .form-group
+          = f.label :email, 'E-mail'
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Enter email", class: "form-control", required: true
+
+        .form-group
+          = f.label :password, 'Password (8 characters minimum)'
+          = f.password_field :password, autocomplete: "off", class: "form-control", minlength: 8, required: true
+
+        .form-group
+          = f.label :password_confirmation, 'Confirm Password'
+          = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true
+
+        .row.no-gutters
+          = link_to "Cancel", new_login_path, class: "col-sm-3 btn btn-danger"
+          = f.submit "Sign Up", class: "col-sm-3 btn btn-primary"

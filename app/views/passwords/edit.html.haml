@@ -1,0 +1,23 @@
+- this_title_is "Change Password"
+
+.row.yh-container
+  .col-12.col-sm-7.mr-sm-auto.ml-sm-auto
+
+    = render "layouts/alert"
+
+    .jumbotron
+      %h1.yh-page-title Change your password
+
+      = form_for(:user, as: 'user', method: :put, url: update_password_path(token: params[:token])) do |f|
+
+        .form-group
+          = f.label :password, 'Password (8 characters minimum)'
+          = f.password_field :password, autocomplete: "off", class: "form-control", minlength: 8, required: true
+
+        .form-group
+          = f.label :password_confirmation, 'Confirm Password'
+          = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true
+
+        .row.no-gutters
+          = link_to "Cancel", root_path, class: "col-sm-3 btn btn-danger"
+          = f.submit "Done", class: "col-sm-3 btn btn-primary"

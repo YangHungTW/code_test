@@ -1,0 +1,17 @@
+.yh-alert
+  - if flash.alert
+    .alert.alert-dismissible.alert-danger
+      %button{class: "close", type: "button", "data-dismiss" => "alert"}
+        = icon("fas", "times")
+      %strong= "Oops!"
+      %ul
+        - flash.alert.each do |message|
+          %li= message
+
+  - if flash.notice
+    .alert.alert-dismissible.alert-success
+      %button{class: "close", type: "button", "data-dismiss" => "alert"}
+        = icon("fas", "times")
+      %ul
+        - flash.notice.each do |message|
+          %li= message
