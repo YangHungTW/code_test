@@ -19,11 +19,11 @@
 
         .form-group
           = f.label :password, 'Password (8 characters minimum)'
-          = f.password_field :password, autocomplete: "off", class: "form-control", minlength: 8, required: true
+          = f.password_field :password, autocomplete: "off", class: "form-control", minlength: 8
 
         .form-group
           = f.label :password_confirmation, 'Confirm Password'
-          = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true
+          = f.password_field :password_confirmation, autocomplete: "off", class: "form-control"
 
         .row.no-gutters
           = link_to "Cancel", root_path, class: "col-sm-3 btn btn-danger"
