@@ -1,0 +1,10 @@
+@mixin first-bigger {
+  &:first-letter {
+    font-size: 120%;
+  }
+}
+
+.yh-first-bigger {
+  @include first-bigger;
+}
+

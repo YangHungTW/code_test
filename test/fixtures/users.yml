@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+yam:
+  name: yam
+  email: yam@unittest.com
+  # password: 'asdffdsa'
+  password_digest: '$2a$10$yqrlRTEDSgCUyBcBs74A5ORRvo7vDjQwAr0zangE3Nk5LeFRs2SDG'
+  reset_password_token: <%= Digest::SHA1.hexdigest("yam@railstest.com#{Time.now.to_i}") %>
+  reset_password_sent_at: <%= Time.now %>
+
+yang:
+  name: yang
+  email: yang@unittest.com
+  # password: 'asdffdsa'
+  password_digest: '$2a$10$yqrlRTEDSgCUyBcBs74A5ORRvo7vDjQwAr0zangE3Nk5LeFRs2SDG'
+  reset_password_token: <%= Digest::SHA1.hexdigest("yam@railstest.com#{Time.now.to_i}") %>
+  reset_password_sent_at: 2017-01-01 00:00:00

@@ -1,0 +1,19 @@
+header {
+  .yh-brand-text {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: -5px;
+    &:not(.yh-brand-bigger) {
+      font-size: 0.9rem;
+    }
+    &.yh-brand-bigger {
+      font-size: 1.08rem;
+    }
+  }
+}
+
+.yh-alert {
+  ul {
+    margin-bottom: 0;
+  }
+}
