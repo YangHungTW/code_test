@@ -1,24 +1,17 @@
-# README
+# Code Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repositorie is to create a simple user registration with Ruby on Rails.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+This task requires Ruby 2.5.1 and Rails 5.2.1
 
-* System dependencies
+``` bash
+git clone https://github.com/YangHungTW/code_test.git
 
-* Configuration
+cd code_test
 
-* Database creation
+bundle install
+rails s
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
